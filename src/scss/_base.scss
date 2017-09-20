@@ -1,0 +1,21 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-size: $baseFontSize;
+}
+button {
+	&:active {
+		outline: none;
+	}
+	&:focus {
+		outline: none;
+	}
+	&::-moz-focus-inner {
+		border: 0;
+	}
+	&:hover {
+		cursor: pointer;
+	}
+}

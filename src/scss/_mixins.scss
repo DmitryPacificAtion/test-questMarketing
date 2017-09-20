@@ -1,0 +1,50 @@
+@function rem($pixels, $context: $baseFontSize) {
+	@if (unitless($pixels)) {
+		$pixels: $pixels * 1px;
+	}
+	@if (unitless($context)) {
+		$context: $context * 1px;
+	}
+	@return $pixels/$context * 1rem;
+}
+@mixin transition ($who: all, $time: 0.4s, $animate: ease) {
+	transition: $who $time $animate;
+}
+@mixin set-box-shadow ($top: 0, $left: 0, $blur: 20px, $color: rgba(0, 0, 0, 0.5), $inset: false) {
+	@if $inset {
+		-webkit-box-shadow:inset $top $left $blur $color;
+		-moz-box-shadow:inset $top $left $blur $color;
+		box-shadow:inset $top $left $blur $color;
+	} @else {
+		-webkit-box-shadow: $top $left $blur $color;
+		-moz-box-shadow: $top $left $blur $color;
+		box-shadow: $top $left $blur $color;
+	}
+}
+/* @mixin set-cols-width ($num, $padding: 15px) {
+	@if ($num > 0 && $num < 13) {
+		float: left;
+		padding: $padding;
+		width: $num * 100/12 * 1%;
+	}
+	@else {
+		width: auto;
+	}
+} */
+/*@mixin respond-to ($screen, $lower-screen: false) {
+	@if ($lower-screen) {
+		@media only screen and (min-width: $lower-screen) and (max-width: $screen) { @content; }
+	}
+	@else {
+		@media only screen and (max-width: $screen) { @content; }
+	}
+ *** Available variables *** 
+	$mob: 320px;
+	$mob-lan: 480px;
+	$huge: 640px;
+	$pda: 768px;
+	$medium: 992px;
+	$pda-lan: 1024px;
+	$desktop: 1280px;
+ 
+}*/ 

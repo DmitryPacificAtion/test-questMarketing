@@ -1,0 +1,17 @@
+.page-header {
+	background: url('../img/lamps.jpg') repeat 200px 0;
+	height: 100px;
+	box-sizing: content-box;
+	border-bottom: 15px solid;
+	border-image: url('../img/border-img.png') 15;
+}
+.page-content {
+	background: url('../img/bg.jpg') no-repeat 0 -100px;
+	background-size: cover;
+	height: 1100px;
+}
+.page-footer {
+	background-color: $dark;
+	border-top: 3px solid #e3b21f;
+	padding: 15px 0;
+}
