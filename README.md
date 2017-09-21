@@ -1,1 +1,1 @@
-# Don`t forgot npm i
+# Don`t forget npm i
