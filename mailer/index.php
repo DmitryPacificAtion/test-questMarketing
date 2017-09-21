@@ -1,3 +1,11 @@
+<?php 
+
+$to = 'bruslik.dmitry@gmail.com';
+$to2 = 'dmitry.bruslik@yandex.ua';
+$to3 = 'pacification@list.ru';
+$to4 = 'dmitry.bruslik@ukr.net';
+
+$messange = '
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +34,7 @@
 	}
 	.content {
 		color: #ffffff;
-		font-family: 'Open Sans', sans-serif;
+		font-family: "Open Sans", sans-serif;
 		text-align: center;
 	}
 	.f22 {
@@ -165,5 +173,11 @@
 								<!-- </ Wrapper> -->
 							</td></tr>
 						</table>
+						<a href="">Unscribe</a>
 					</body>
-					</html>
+					</html>';
+
+mailer("$to, $to2, $to3, $to4", 'Test', $messange);
+echo 'Got it';
+
+?>
